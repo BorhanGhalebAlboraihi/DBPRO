@@ -1,0 +1,11 @@
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\bin\Debug\netcoreapp2.0\SalesSystem.deps.json
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\bin\Debug\netcoreapp2.0\SalesSystem.runtimeconfig.json
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\bin\Debug\netcoreapp2.0\SalesSystem.runtimeconfig.dev.json
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\bin\Debug\netcoreapp2.0\SalesSystem.dll
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\bin\Debug\netcoreapp2.0\SalesSystem.pdb
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\obj\Debug\netcoreapp2.0\SalesSystem.csprojAssemblyReference.cache
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\obj\Debug\netcoreapp2.0\SalesSystem.csproj.CoreCompileInputs.cache
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\obj\Debug\netcoreapp2.0\SalesSystem.AssemblyInfoInputs.cache
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\obj\Debug\netcoreapp2.0\SalesSystem.AssemblyInfo.cs
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\obj\Debug\netcoreapp2.0\SalesSystem.dll
+C:\Users\Borhan Alboraihi\source\repos\SalesSystem\SalesSystem\obj\Debug\netcoreapp2.0\SalesSystem.pdb
