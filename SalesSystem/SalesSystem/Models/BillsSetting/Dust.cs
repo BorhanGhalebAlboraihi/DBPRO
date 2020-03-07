@@ -9,10 +9,11 @@ namespace SalesSystem.Models.BillsSetting
     {
         //جدول الضريبة
         public int Id { get; set; }
-        public int Groupe_Id { get; set; }
-        public string Groupe_Name { get; set; }
-        public int Categore_Id { get; set; }
-        public string Categore_Name { get; set; }
+        public int SG_Id { get; set; }
+        public string SG_Name { get; set; }
+        public int Cat_Id { get; set; }
+        public virtual Categores_and_Stores.Categores.Categores_Data Categores_Data { get; set; }
+        public string Cat_Name { get; set; }
         public double Buys_Dust { get; set; }
         public double Sales_Dust { get; set; }
         

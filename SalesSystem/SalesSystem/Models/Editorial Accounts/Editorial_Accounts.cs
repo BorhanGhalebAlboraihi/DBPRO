@@ -8,7 +8,7 @@ namespace SalesSystem.Models.Editorial_Accounts
 {
     public class Editorial_Accounts
     {
-        //الحسابات الافتتاحية 
+        //الحسابات الافتتاحية هي نفسها القيود اليوميةة 
         /// <summary>
         /// Top  يتم من خلال هذه الشاشة ادخال الأرصدة الافتتاحية للحسابات كتالي
         /// </summary>
@@ -25,7 +25,9 @@ namespace SalesSystem.Models.Editorial_Accounts
         public string M_Name { get; set; }
         public virtual Accounts.Moneys Moneys { get; set; }
         public double Transfer_Price { get; set; }
-      
+        public string Communique { get; set; }
+        public string Refference { get; set; }
+
         /// <summary>
         /// Constraint Data
         /// </summary>
@@ -34,16 +36,16 @@ namespace SalesSystem.Models.Editorial_Accounts
         public virtual Accounts.MainAccounts MainAccounts { get; set; }
         public string Account_Name { get; set; }
         /// <summary>
-        /// 
+        /// من خلال تحديد رقم الحساب يمكن تحديد مركز التكلفة
         /// </summary>
         public string C_Name { get; set; }
-        public string Communique { get; set; }
+     
         public double Debtor { get; set; }
         public double Borrower { get; set; }
-        public double Equivalent { get; set; }
+        public double Equivalent { get; set; }// المكافئ
         public double Debtor_Total { get; set; }
         public double Borrower_Total { get; set; }
-        public double Bands { get; set; }
+        public double Bands { get; set; }//الفارق
         /// <summary>
         //يجب ان يكون الفارق بين المدين والدائن صفر
         /// </summary>

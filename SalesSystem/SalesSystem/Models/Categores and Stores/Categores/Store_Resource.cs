@@ -11,14 +11,21 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
 
         //التوريد المخزني
         //Top
-        public int Move_Id { get; set; }
+        public int Move_Id { get; set; }//رقم التوريد
         public DateTime History { get; set; }
+        public string RE_Type { get; set; } //نوع التوريد
+
         public string State { get; set; }//نهائي او غير نهائي
         public string Const_Type { get; set; }//نوع القيد
+        public virtual Editorial_Accounts.Constraints_Type Constraints_Type { get; set; }
         public int Sup_Id { get; set; }
+        public virtual Accounts.Suppliers Suppliers { get; set; }
         public string Sup_Name { get; set; }
+        public int Cust_Id { get; set; }
+        public virtual Accounts.Customers Customers { get; set; }
+        public string Cust_Name { get; set; }
         public int M_Id { get; set; }//Money
-        public int M_Name { get; set; }//Money
+        public string M_Name { get; set; }//Money
         public int S_Id { get; set; }
         public string S_Name { get; set; }
         /// <summary>

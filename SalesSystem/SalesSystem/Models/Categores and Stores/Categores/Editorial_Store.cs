@@ -11,11 +11,13 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         /// المخزون الافتتاحي
         /// </summary>
         public int Move_Id { get; set; }
+        public DateTime History { get; set; }
         public int S_Id { get; set; }
         public string S_Name { get; set; }
         public int SG_Id { get; set; }
         public string SG_Name { get; set; }
         public int Cat_Id { get; set; }
+        public virtual Categores.Categores_Data Categores_Data { get; set; }
         public string Cat_Name { get; set; }
         public int U_Id { get; set; }
         public string U_Name { get; set; }
@@ -23,6 +25,7 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         public DateTime BreakingHistory { get; set; }
         public string Communique { get; set; }
         public int M_Id { get; set; }
+        public virtual Cat_Moneys Cat_Moneys { get; set; }
         public string M_Name { get; set; }
         /// <summary>
         /// /

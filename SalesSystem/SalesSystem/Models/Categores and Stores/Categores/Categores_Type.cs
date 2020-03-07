@@ -11,6 +11,6 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         public int CT_Id { get; set; }
         [Key]
         public string CT_Name { get; set; }
-        public virtual ICollection<Categores_Type> Categores_Types { get; set; }
+        public virtual ICollection<Categores_Data> Categores_Datas { get; set; }
     }
 }

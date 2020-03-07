@@ -15,7 +15,13 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         public string SG_Name { get; set; }
         public int Cat_Id { get; set; }
         public string Cat_Name { get; set; }
+        public double CostPrice { get; set; }
+        public double SalePrice { get; set; }
+        public double DismembermentPrice { get; set; }
+        public double SentencePrice { get; set; }
+        public double PrivatePrice { get; set; }
         public double Update_Ascription { get; set; }//نسبة التعديل
+       
        
 
     }

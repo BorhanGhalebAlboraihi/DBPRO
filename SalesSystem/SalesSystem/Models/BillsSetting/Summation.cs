@@ -13,6 +13,9 @@ namespace SalesSystem.Models.BillsSetting
         public int S_Id { get; set; }
         public virtual ICollection<Accounts.Customers> Customers { get; set; }
         public virtual ICollection<Accounts.Suppliers> Suppliers { get; set; }
+        public virtual ICollection<LocalAccounts.Arresting_Voucher> Arresting_Vouchers { get; set; }
+        public virtual ICollection<LocalAccounts.Exchange__Voucher> Exchange__Vouchers { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
         public String S_Name { get; set; }
         public String Type { get; set; }
         public String Adddress { get; set; }

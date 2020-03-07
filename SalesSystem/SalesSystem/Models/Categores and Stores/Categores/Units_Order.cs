@@ -10,7 +10,8 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         public int Move_Id { get; set; }
         public int SG_Id { get; set; }
         public string SG_Name { get; set; }
-        public int Cat_Id { get; set; }
+        public int Cat_Id { get; set; }   
+        public virtual Categores_Data Categores_Data { get; set; }
         public string Cat_Name { get; set; }
         /// <summary>
         /// Relation  Foreign key  with Units table
@@ -22,8 +23,8 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         /// <summary>
         /// Relation  Foreign key  with Barcode table
         /// </summary>
-        public int Bar_Id { get; set; }
-        public virtual Stores.Barcode Barcode { get; set; }
+     
+     
 
     }
 }

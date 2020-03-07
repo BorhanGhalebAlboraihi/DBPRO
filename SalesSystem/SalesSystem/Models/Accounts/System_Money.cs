@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SalesSystem.Models.Categores_and_Stores.Categores
+namespace SalesSystem.Models.Accounts
 {
-    public class Cat_Moneys
-    {
-        [Key]
+    public class System_Money
+    {//جدول تحديد عملة النظام وضروري تكون عملة المخزون بنفس عملة النظام
         public int M_Id { get; set; }
-        public virtual ICollection<Categores.Categores_Data> GetCategores_Datas { get; set; }
-        public virtual ICollection<Categores.Store_Outgoings> Store_Outgoings { get; set; }
-        public virtual ICollection<Editorial_Store > Editorial_Stores { get; set; }
+        public virtual ICollection<Categores_and_Stores.Stores.Stores > Stores { get; set; }
         public string M_Name { get; set; }
         public string M_Symbole { get; set; }
         public string M_Barket { get; set; }//الفئة

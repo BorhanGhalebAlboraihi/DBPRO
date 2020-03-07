@@ -20,6 +20,12 @@ namespace SalesSystem.Models.Accounts
         public virtual ICollection<Customers> Customers { get; set; }
         public virtual ICollection<Suppliers> Suppliers { get; set; }
         public virtual ICollection <Editorial_Accounts.Editorial_Accounts> Editorial_Accounts { get; set; }
+        public virtual ICollection<LocalAccounts.Arresting_Voucher> Arresting_Vouchers { get; set; }
+        public virtual ICollection<LocalAccounts.Bank_Deposited> Bank_Depositeds { get; set; }
+        public virtual ICollection<LocalAccounts.CheqesWorks> CheqesWorks { get; set; }
+        public virtual ICollection<LocalAccounts.Exchange__Voucher> Exchange__Vouchers { get; set; }
+        public virtual ICollection<LocalAccounts.EmployeeMove_Type> EmployeeMove_Types { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
         public string M_Symbole { get; set; }
         public string M_Barket { get; set; }//الفئة
         public double M_Pric { get; set; }// سعر تحويل

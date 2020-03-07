@@ -12,24 +12,27 @@ namespace SalesSystem.Models.LocalAccounts
         /// وهذذذه الشاشذذة هذذي شاشذذة يذذتم مذذن خلالهذذا الاسذذتعلام، إضذذافة، تعذذديل وحذذذف كذذل مذذا يتعلذذق بحركذذات المذذوظفين والعمذذال مذذن حيذذث (السذذلف  الاضافي...) باستثناء الراتب. – الخصومات
         /// </summary>
         /// Update Move on Employee
-        public int Move_Id { get; set; }
-        public string Move_Type { get; set; }
+        public int EM_Id { get; set; }
+        public virtual EmployeeMove_Type EmployeeMove_Type { get; set; }
+        public string EM_Name { get; set; }
         public string C_Name { get; set; }
         public string M_Name { get; set; }
         public string Month { get; set; }
         public string Year { get; set; }
         public string Communique { get; set; }
         public string State { get; set; }
-        public string History { get; set; }
+        public DateTime History { get; set; }
         /// <summary>
         /// Chesh from Box
         /// </summary>
         public int Box_Id { get; set; }
+        public virtual Accounts.Boxs Boxs { get; set; }
         public string Box_Name { get; set; }
         /// <summary>
         /// Cheqe from Bank
         /// </summary>
         public int Bnk_Id { get; set; }
+        public virtual Accounts.Banks Banks { get; set; }
         public string Bnk_Name { get; set; }
         public int Ch_Id { get; set; }
         public string Deservedness_History { get; set; }
@@ -37,13 +40,14 @@ namespace SalesSystem.Models.LocalAccounts
         /// Select Employees
         /// </summary>
         public int  Emp_Id{ get; set; }
+        public virtual Accounts.Employees Employees { get; set; }
         public string Emp_Name { get; set; }
         public string Location { get; set; }
-        public double Work_Type { get; set; }//Days and weekly and month and year
+        public string Work_Type { get; set; }//Days and weekly and month and year
         public double Salery { get; set; }
         public double Equivalence { get; set; }//المكافئة
         public double Addset { get; set; }//الاضافي او العلاوه
-        public double Tuxedos { get; set; }
+        public double Tuxedos { get; set; }//علاوة بدلات
         public double Advance { get; set; }//المسحوبات او السلاف
         public double Vulture { get; set; }//الجزاءات
         public double Contender { get; set; }// الاستقطاعات

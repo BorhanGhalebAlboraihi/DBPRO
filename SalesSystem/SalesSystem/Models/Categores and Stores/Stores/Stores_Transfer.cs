@@ -8,17 +8,29 @@ namespace SalesSystem.Models.Categores_and_Stores.Stores
     public class Stores_Transfer
     {
         //التحويل المخزني
+        /// <summary>
+        /// اوامر النقل/التحويل المخزني لا ينتج عنها اي تأثير: ن  بل ينتج عنهما تأثير مخز ني (التأثير على الكميات المخزنيه)  
+        /// </summary>
         //Top
         public int Process_Id { get; set; }
         public DateTime History { get; set; }
         public int Tend_Id { get; set; }//رقم التحويل النهائي
-        //public string from Store1 { get; set; }
+        /// <summary>
+        /// froam store first 
+        /// </summary>
+      //  public int S_Id { get; set; }
         public virtual Stores Store1 { get; set; }
-        //public string to Store2 { get; set; }
+        public string S1_Name { get; set; }
+        /// <summary>
+        /// To Store next
+        /// </summary>
+        public int S2_Id { get; set; }
         public virtual Stores Store2 { get; set; }
+        public string S2_Name { get; set; }
         public int Car_Id { get; set; }//رقم السياره
         public String Care_Id { get; set; }//رقم السائق
         public string Communique { get; set; }
+        public string Refference { get; set; }
         /// <summary>
         /// Relation Foreign Key  with Transfer_CommandType
         /// </summary>
@@ -45,8 +57,10 @@ namespace SalesSystem.Models.Categores_and_Stores.Stores
         public virtual Stores_Units Stores_Units { get; set; }
         public string U_Name { get; set; }
         public double Quantity { get; set; }
+        public double Quantity_Total { get; set; }
         public DateTime BreakingHistory { get; set; }
         public double Price { get; set; }
+        public double Price_Total { get; set; }
 
 
     }

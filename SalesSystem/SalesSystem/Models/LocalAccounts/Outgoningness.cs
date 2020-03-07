@@ -13,7 +13,8 @@ namespace SalesSystem.Models.LocalAccounts
         /// </summary>
         [Key]
         public int Move_Id { get; set; }//رقم الحركة
-        public string  Move_Type { get; set; }
+        public string OUT_Name { get; set; }//نوع الحركة
+        public virtual OutgoningnessMove_Type OutgoningnessMove_Type { get; set; }
         public DateTime Request_History { get; set; }
         public string Request_Comment { get; set; }
         /// <summary>
