@@ -14,12 +14,17 @@ namespace SalesSystem.Models.Categores_and_Stores.Stores
 
         [Key]
         public int U_Id { get; set; }
+        public virtual ICollection<Categores.Categores_Data> Categores_Datas { get; set; }
+        public virtual ICollection<Categores.Units_Order> Units_Orders { get; set; }
+        public virtual ICollection<Barcode> Barcodes { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases_Requerts> Purchases_Requerts { get; set; }
         public string U_Name { get; set; }//aribic
         public string EU_Name { get; set; }//English
         public int Number { get; set; }
         public string Rank_Id { get; set; }
         public string Type { get; set; }
-        public string State { get; set; }
+        public string CS_Name { get; set; }
+        public virtual Categores.Cat_State Cat_State { get; set; }
     }
 }
 

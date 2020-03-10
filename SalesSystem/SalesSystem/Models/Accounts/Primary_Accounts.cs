@@ -24,6 +24,8 @@ namespace SalesSystem.Models.Accounts
         /// </summary>
         public string Rank_Name { get; set; }
         public virtual AccountsRanks AccountsRanks { get; set; }
+        public string M_Name { get; set; }
+        public virtual Moneys Moneys { get; set; }
         public double Debtor_Total { get; set; }//
         public double Borrower_Total { get; set; }
 

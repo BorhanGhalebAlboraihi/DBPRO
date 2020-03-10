@@ -10,6 +10,14 @@ namespace SalesSystem.Models.Accounts.CostCenters
     {
         [Key]
         public int C_Id { get; set; }
+        public virtual ICollection<MainAccounts> MainAccounts { get; set; }
+        public virtual ICollection<LocalAccounts.EmployeeMove_Type> EmployeeMove_Types { get; set; }
+        public virtual ICollection<LocalAccounts.Salerys_Execution> Salerys_Executions { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases_Requerts> Purchases_Requerts { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases_Commands> Purchases_Commands { get; set; }
+        public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
         public string C_Name { get; set; }
         public int MainCenter_Id { get; set; }
         /// <summary>

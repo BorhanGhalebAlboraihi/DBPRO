@@ -11,6 +11,9 @@ namespace SalesSystem.Models.Accounts
         [Key]
         public int Emp_Id { get; set; }
     public virtual ICollection<BillsSetting.Employee_Lower> Employee_Lowers { get; set; }
+        public virtual ICollection<Categores_and_Stores.Categores.Breakage_Categores> Breakage_Categores { get; set; }
+        public virtual ICollection<LocalAccounts.Employees_Activity> Employees_Activities { get; set; }
+        public virtual ICollection<LocalAccounts.Salerys_Execution> Salerys_Executions { get; set; }
         public string Emp_Name { get; set; }
         public int Emp_MainAccountNB { get; set; }
         public string Emp_Netural { get; set; }

@@ -8,7 +8,9 @@ namespace SalesSystem.Models.LocalAccounts
     public class Conciliator_Accounts
     {
         //الحسابات الوسيطة
+        public int Move_Id { get; set; }
         public int Account_Id { get; set; }
+        public virtual Accounts.MainAccounts MainAccounts { get; set; }
         public string Account_Name { get; set; }
         public int MainAccount_Id { get; set; }
         public string Account_Netural { get; set; }

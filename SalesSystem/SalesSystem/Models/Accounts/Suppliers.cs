@@ -11,6 +11,15 @@ namespace SalesSystem.Models.Accounts
 
         [Key]
         public int Sup_Id { get; set; }
+        public virtual ICollection<Categores_and_Stores.Categores.Store_Outgoings> Store_Outgoinge { get; set; }
+        public virtual ICollection<Categores_and_Stores.Categores.Store_Resource> Store_Resources { get; set; }
+        public virtual ICollection<LocalAccounts.Bank_Drafting> Bank_Draftings { get; set; }
+        public virtual ICollection<LocalAccounts.Arresting_Voucher> Arresting_Vouchers { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases_Requerts> Purchases_Requerts { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases_Commands> Purchases_Commands { get; set; }
+        public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
         public string Sup_Name { get; set; }
         public int Sup_MainAccountNB { get; set; }
         public string Sup_Rank { get; set; }

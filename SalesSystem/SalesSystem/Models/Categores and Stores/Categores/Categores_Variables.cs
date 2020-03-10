@@ -12,13 +12,12 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         [Key]
         public int Process_Id { get; set; }
         public int Groupe_Id { get; set; }
-        public virtual Stores.Stores_Groupe Stores_Groupe { get; set; }
         public string Groupe_Name { get; set; }
         public int Cat_Id { get; set; }
         public string Cat_Name { get; set; }
         public string CT_Name { get; set; }
         public string Wop_Name { get; set; }//الاسم الاجنبي
-        public int Account_Id { get; set; }//رقم الحساب للصنف هو رقم المجموعه  الخاص فيه 
+        public int Account_Id { get; set; }//رقم الحساب للصنف هو رقم الصنف الذي يحتوية  الخاص فيه 
         public double Refill { get; set; }//العبوة
         public string State { get; set; }
         public double Sales_Price { get; set; }

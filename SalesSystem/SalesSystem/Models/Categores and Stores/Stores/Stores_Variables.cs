@@ -8,6 +8,7 @@ namespace SalesSystem.Models.Categores_and_Stores.Stores
 {
     public class Stores_Variables
     {
+       // تعديل المخازن
         [Key]
         public int S_Id { get; set; }
       //  public virtual ICollection<Stores_Groupe> Stores_Groupes { get; set; }

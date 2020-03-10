@@ -11,15 +11,29 @@ namespace SalesSystem.Models.Categores_and_Stores.Stores
         [Key]
         //رقم حساب المخزون الخاص به مثلا 100 هذا للمخزون 100-100 هذ للمجموعة 100100100هذ لللصنف وهكذا
 
-        public int StoreAccount_Id { get; set; }//number account stores and categores 
-
-        public string Description{ get; set; }
-        public double Account_Id { get; set; }// الدليل المحاسبي
-        public string Account_Name { get; set; }
-        public string Center { get; set; }
+        // الحسابات الرئيسية
+        public int Move_Id { get; set; }
+        public string Description { get; set; }
+        public int Account_Id { get; set; }
+        public virtual Accounts.MainAccounts MainAccounts { get; set; }
+        public string Account_Name { get; set; } //في الدليل المحاسبي
+        /// <summary>
+        /// Foreign Key with Account Type
+        /// </summary>
+        public string Type_Name { get; set; }
+        public virtual Accounts.AccountsTypes AccountsTypes { get; set; }
         public DateTime History { get; set; }//السرية
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Rank_Name { get; set; }
+        public virtual Accounts.AccountsRanks  AccountsRanks { get; set; }
+        public string M_Name { get; set; }
+        public virtual Accounts.Moneys Moneys { get; set; }
+        public double Debtor_Total { get; set; }//
+        public double Borrower_Total { get; set; }
 
-       
-      
+
+
     }
 }

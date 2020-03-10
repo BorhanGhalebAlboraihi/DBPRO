@@ -10,6 +10,7 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         //جدول الرفوف
         public int Racks_Id { get; set; }
         public int S_Id { get; set; }
+        public virtual Stores.Stores Stores { get; set; }
         public string S_Name { get; set; }
         public string Racks_Specification { get; set; }
         public string Racks_Description { get; set; }

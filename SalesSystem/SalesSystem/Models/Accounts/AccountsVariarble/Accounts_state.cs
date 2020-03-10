@@ -12,6 +12,7 @@ namespace SalesSystem.Models.Accounts.AccountsVariarble
         [Key]
         public string AS_Name { get; set; }
         public virtual ICollection<MainAccounts> MainAccounts { get; set; }
+        public virtual ICollection<LocalAccounts.CheqesWorks> CheqesWorks { get; set; }
         public string EngName { get; set; }
     }
 }

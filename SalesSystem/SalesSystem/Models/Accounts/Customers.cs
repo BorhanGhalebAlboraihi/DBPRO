@@ -10,6 +10,11 @@ namespace SalesSystem.Models.Accounts
     {
         [Key]
         public int Cust_Id { get; set; }
+       public virtual ICollection<Categores_and_Stores.Categores.Store_Outgoings> Store_Outgoings { get; set; }
+        public virtual ICollection<Categores_and_Stores.Categores.Store_Resource> Store_Resources { get; set; }
+        public virtual ICollection<LocalAccounts.Exchange__Voucher> Exchange__Vouchers { get; set; }
+        public virtual ICollection<LocalAccounts.Bank_Deposited> Bank_Depositeds { get; set; }
+        public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
         public string Cust_Name { get; set; }
         public int Cust_MainAccountNB { get; set; }
         public string Cust_Rank { get; set; }

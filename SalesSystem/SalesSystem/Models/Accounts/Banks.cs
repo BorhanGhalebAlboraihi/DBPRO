@@ -10,6 +10,13 @@ namespace SalesSystem.Models.Accounts
     {
         [Key]
         public int Bnk_Id { get; set; }
+        public virtual ICollection<LocalAccounts.Arresting_Voucher> Arresting_Vouchers { get; set; }
+        public virtual ICollection<LocalAccounts.Bank_Deposited> Bank_Depositeds { get; set; }
+        public virtual ICollection<LocalAccounts.CheqesWorks> CheqesWorks { get; set; }
+        public virtual ICollection<LocalAccounts.Exchange__Voucher> Exchange__Vouchers  { get; set; }
+        public virtual ICollection<LocalAccounts.Employees_Activity> Employees_Activities { get; set; }
+        public virtual ICollection<LocalAccounts.Salerys_Execution> Salerys_Executions { get; set; }
+        public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
         public string BakArabic_Name { get; set; }
         public string BakEnglish_Name { get; set; }
         public int Bak_MainAccountNB { get; set; }
