@@ -21,8 +21,6 @@ namespace SalesSystem.Models.Accounts
         public virtual ICollection<Al_Purchases.Purchases_Requerts> Purchases_Requerts { get; set; }
        // public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
         public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
-        public virtual ICollection<Al_Sales.Sales_Commands> Sales_Commands { get; set; }
-        public virtual ICollection<Al_Sales.Sales_Requests> Sales_Requests { get; set; }
       //  public virtual ICollection<Al_Sales.Sales_Returns> Sales_Returns { get; set; }
         public virtual ICollection<Al_Sales.ServiceSales_Invoice> ServiceSales_Invoices { get; set; }
         public virtual ICollection<Al_Sales.Prices_Displaies> Prices_Displaies { get; set; }
