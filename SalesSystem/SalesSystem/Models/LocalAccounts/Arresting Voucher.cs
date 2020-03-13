@@ -12,6 +12,11 @@ namespace SalesSystem.Models.LocalAccounts
         //Top
         [Key]
         public int Move_Id { get; set; }
+        /// <summary>
+        /// طريقة الدفع
+        /// </summary>
+        public bool Cesh { get; set; }
+        public bool Cheque { get; set; }
         public DateTime Vou_History { get; set; }
         /// <summary>
         /// 
@@ -41,15 +46,17 @@ namespace SalesSystem.Models.LocalAccounts
       
    
         //Select Cheque
-        public int Ch_Id { get; set; }
+        public int Bnk_Id { get; set; }
         public virtual Accounts.Banks Banks { get; set; }
-        public String Ch_Name { get; set; }
+        public String Bnk_Name { get; set; }
+        public int Ch_Id { get; set; }
         public string Ch_Communique { get; set; }
         public int Reffe_Id { get; set; }
         public string CT_Name { get; set; }
         public virtual Editorial_Accounts.Cheque_Type Cheque_Type { get; set; }
         public DateTime Deservedness_History  { get; set; }//تاريخ الاستحقاق
-        public string Sight_Method  { get; set; }//طريقة التسديد
+        public string SMT_Name { get; set; }//طريقة التسديد
+        public virtual Al_Purchases.SightMethod_Types SightMethod_Types { get; set; } 
         /// <summary>
         /// هذا العمود حق المحصل يدخل سواء كان بنك او صندوق
         /// </summary>

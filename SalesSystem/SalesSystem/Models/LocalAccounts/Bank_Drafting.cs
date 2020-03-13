@@ -15,6 +15,7 @@ namespace SalesSystem.Models.LocalAccounts
         //Top
         [Key]
         public int Move_Id { get; set; }
+
         public DateTime Vou_History { get; set; }
         public int BT_Id { get; set; }
         public virtual Editorial_Accounts.Bonds_Types Bonds_Types { get; set; }

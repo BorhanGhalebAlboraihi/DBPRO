@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,10 +9,15 @@ namespace SalesSystem.Models.Al_Sales
     public class Sales_Invoice
     {
         //فاتورةالمبيعات 
-        public int Move_Id { get; set; }//رقم الفاتورة ويجب ان تكون متسلسلةحسب تحديد النظام
+        [Key]
+
+        public int Move_Id { get; set; }//رقم الحركة
+        public virtual ICollection<Sales_Returns> Sales_Returns { get; set; }
+        public int SIMove_Id { get; set; }//رقم الفاتورة
+    
         /// <summary>
         /// نوع الدفع شيك صندوق -اجل
-        /// </summary>
+        /// </summary>                               
         public bool Cash_CheckBox { get; set; }
         public bool Cheque_CheckBox { get; set; }
         public bool Debtor_CheckBox { get; set; }//اجل
@@ -21,7 +27,7 @@ namespace SalesSystem.Models.Al_Sales
         public int PCMove_Id { get; set; }
        // public virtual Purchases_Commands Purchases_Commands { get; set; }
 
-        public DateTime History { get; set; }//تاريخ مردودالمشتريات 
+        public DateTime History { get; set; } 
 
 
         /// <summary>
@@ -37,6 +43,21 @@ namespace SalesSystem.Models.Al_Sales
         public string Box_Name { get; set; }
         /// <summary>
         /// if select Debtor from Supllier
+        /// </summary>
+        /// <summary>
+        /// Cesh from Bank
+        /// </summary>
+        public int Bnk_Id { get; set; }
+        public virtual Accounts.Banks Banks { get; set; }
+        public string Bnk_Name { get; set; }
+        public int ch_Id { get; set; }//number cheqe
+        public string Ch_Type { get; set; }
+        public DateTime Deservedness_History { get; set; }//تاريخ الاستحقاق
+        public string SMT_Name { get; set; }//طريقة التسديد
+        public virtual Al_Purchases.SightMethod_Types SightMethod_Types { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public int Cust_Id { get; set; }
         public virtual Accounts.Customers Customers { get; set; }
@@ -108,6 +129,7 @@ namespace SalesSystem.Models.Al_Sales
         public double CategoreLower { get; set; }//التخفيض بالنسبة للصنف
         public double FreeLower { get; set; }//التخفيض بالنسبة المجاني
         public double HandLower { get; set; }//التخفيض بالنسبة اليدوي
+        public double AutoLower { get; set; }//التخفيض الاّلي
         public double AllTotal { get; set; }//الاجمالي الكلي بعد التخفيض ولكل
         public double Pure { get; set; }//الصافي
     }

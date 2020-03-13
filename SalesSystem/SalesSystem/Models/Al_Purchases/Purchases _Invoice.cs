@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +9,12 @@ namespace SalesSystem.Models.Al_Purchases
     public class Purchases__Invoice
     {
         //فاتورة المشتريات
-        public int Move_Id { get; set; }//رقم الفاتورة ويجب ان تكون متسلسلةحسب تحديد النظام
+        [Key]
+        public int Move_Id { get; set; }//رقم الحركة
+        public virtual ICollection<Purchases_Returns> Purchases_Returns { get; set; }
+        public int PIMove_Id { get; set; }//رقم الفاتورة
+     
+
         /// <summary>
         /// نوع الدفع شيك صندوق -اجل
         /// </summary>
@@ -21,7 +27,7 @@ namespace SalesSystem.Models.Al_Purchases
         public int PCMove_Id { get; set; }
         public virtual Purchases_Commands Purchases_Commands { get; set; }
      
-        public DateTime History { get; set; }//تاريخ مردودالمشتريات 
+        public DateTime History { get; set; } 
        
 
         /// <summary>
@@ -35,6 +41,17 @@ namespace SalesSystem.Models.Al_Purchases
         public int Box_Id { get; set; }
         public virtual Accounts.Boxs Boxs { get; set; }
         public string Box_Name { get; set; }
+        /// <summary>
+        /// Cesh from Bank
+        /// </summary>
+        public int Bnk_Id { get; set; }
+        public virtual Accounts.Banks Banks { get; set; }
+        public string Bnk_Name { get; set; }
+        public int ch_Id { get; set; }//number cheqe
+        public string Ch_Type { get; set; }
+        public DateTime Deservedness_History { get; set; }//تاريخ الاستحقاق
+        public string SMT_Name { get; set; }//طريقة التسديد
+        public virtual Al_Purchases.SightMethod_Types SightMethod_Types { get; set; }
         /// <summary>
         /// if select Debtor from Supllier
         /// </summary>
@@ -103,8 +120,9 @@ namespace SalesSystem.Models.Al_Purchases
         public DateTime BraekingHistory { get; set; }
         public double Ascription { get; set; }//النسبة للمشتري
         public double CategoreLower { get; set; }//التخفيض بالنسبة للصنف
-        public double FreeLower { get; set; }//التخفيض بالنسبة المجاني
-        public double HandLower { get; set; }//التخفيض بالنسبة اليدوي
+        public double FreeLower { get; set; }//التخفيض المجاني
+        public double HandLower { get; set; }//التخفيض  اليدوي
+        public double AutoLower { get; set; }//التخفيض الاّلي
         public double AllTotal { get; set; }//الاجمالي الكلي بعد التخفيض ولكل
         public double Pure { get; set; }//الصافي
 

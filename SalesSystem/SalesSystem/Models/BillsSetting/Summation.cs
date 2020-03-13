@@ -19,6 +19,9 @@ namespace SalesSystem.Models.BillsSetting
         public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
         public virtual ICollection<Al_Purchases.Purchases_Commands> Purchases_Commands { get; set; }
         public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
+        public virtual ICollection<Al_Sales.Sales_Returns> Sales_Returns { get; set; }
+        public virtual ICollection<Al_Sales.ServiceSales_Invoice> ServiceSales_Invoices { get; set; }
+        public virtual ICollection<Al_Sales.Prices_Displaies> Prices_Displaies { get; set; }
         public String S_Name { get; set; }
         public String Type { get; set; }
         public String Adddress { get; set; }

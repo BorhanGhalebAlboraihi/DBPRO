@@ -26,8 +26,12 @@ namespace SalesSystem.Models.Accounts
         public virtual ICollection<LocalAccounts.Exchange__Voucher> Exchange__Vouchers { get; set; }
         public virtual ICollection<LocalAccounts.EmployeeMove_Type> EmployeeMove_Types { get; set; }
         public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
-        public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
+      //  public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
         public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
+       // public virtual ICollection<Al_Sales.Sales_Returns> Sales_Returns { get; set; }
+        public virtual ICollection<Al_Sales.ServiceSales_Invoice> ServiceSales_Invoices { get; set; }
+        public virtual ICollection<Al_Sales.Prices_Displaies> Prices_Displaies { get; set; }
+        public virtual ICollection<AccountingMoves_Migration.CeshVouchers_Migration> CeshVouchers_Migrations { get; set; }
         public string M_Symbole { get; set; }
         public string M_Barket { get; set; }//الفئة
         public double M_Pric { get; set; }// سعر تحويل

@@ -9,6 +9,7 @@ namespace SalesSystem.Models.Accounts
     {//جدول تحديد عملة النظام وضروري تكون عملة المخزون بنفس عملة النظام
         public int M_Id { get; set; }
         public virtual ICollection<Categores_and_Stores.Stores.Stores > Stores { get; set; }
+        public virtual AccountingMoves_Migration.CeshVouchers_Migration CeshVouchers_Migration { get; set; }
         public string M_Name { get; set; }
         public string M_Symbole { get; set; }
         public string M_Barket { get; set; }//الفئة

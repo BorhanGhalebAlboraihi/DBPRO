@@ -24,14 +24,21 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         public virtual ICollection<Categores__Lower> GetCategores__Lowers { get; set; }
         public virtual ICollection<Stores.Cat_Articles> Cat_Articles { get; set; }
         public virtual ICollection<Stores.Barcode> Barcodes { get; set; }
-        public virtual ICollection<Categores.Store_Outgoings> Store_Outgoings { get; set; }
         public virtual ICollection<Editorial_Store > Editorial_Stores { get; set; }
         public virtual ICollection<Stores.Nesting_Categores> Nesting_Categores { get; set; }
         public virtual ICollection<BillsSetting.Dust> Dusts { get; set; }
-        public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
+       // public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
         public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
         public virtual ICollection<Al_Purchases.Purchases_Requerts> Purchases_Requerts { get; set; }
         public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
+       // public virtual ICollection<Al_Sales.Sales_Returns> Sales_Returns { get; set; }
+        public virtual ICollection<Al_Sales.ServiceSales_Invoice> ServiceSales_Invoices { get; set; }
+        public virtual ICollection<Al_Sales.Prices_Displaies> Prices_Displaies { get; set; }
+        public virtual ICollection<Categores.Store_Resource> Store_Resources { get; set; }
+        public virtual ICollection<Categores.Store_Outgoings> Store_Outgoings { get; set; }
+       // public virtual ICollection<Stores.StoreResource_Returns> StoreResource_Returns { get; set; }
+       // public virtual ICollection<Stores.StoreOutgoings_Returns> StoreOutgoings_Returns { get; set; }
+        public virtual ICollection<Stores.Stores_Transfer> Stores_Transfers { get; set; }
         public string Cat_Name { get; set; }
         /// <summary>
         /// Relationship Foreign Key with Categores_Type

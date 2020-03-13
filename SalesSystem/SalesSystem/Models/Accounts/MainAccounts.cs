@@ -21,15 +21,23 @@ namespace SalesSystem.Models.Accounts
         public virtual ICollection<Categores_and_Stores.Stores.Stores> Stores { get; set; }
         public virtual ICollection<Editorial_Accounts.Editorial_Accounts> Editorial_Accounts { get; set; }
         public virtual ICollection<Primary_Accounts> Primary_Accounts { get; set; }
-        public virtual ICollection <Categores_and_Stores.Categores.Store_Outgoings> Store_Outgoings { get; set; }
         public virtual ICollection<LocalAccounts.Bank_Deposited> Bank_Depositeds { get; set; }
         public virtual ICollection<LocalAccounts.Bank_Drafting> Bank_Draftings { get; set; }
         public virtual ICollection<LocalAccounts.CheqesWorks> CheqesWorks { get; set; }
         public virtual ICollection<LocalAccounts.Conciliator_Accounts> Conciliator_Accounts { get; set; }
         public virtual ICollection<LocalAccounts.Exchange__Voucher> Exchange__Vouchers { get; set; }
         public virtual ICollection<Al_Purchases.Purchases__Invoice> Purchases__Invoices { get; set; }
-        public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
+       // public virtual ICollection<Al_Purchases.Purchases_Returns> Purchases_Returns { get; set; }
         public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
+       // public virtual ICollection<Al_Sales.Sales_Returns> Sales_Returns { get; set; }
+        public virtual ICollection<Al_Sales.ServiceSales_Invoice> ServiceSales_Invoices { get; set; }
+        public virtual ICollection<Al_Sales.Prices_Displaies> Prices_Displaies { get; set; }
+        public virtual ICollection<Categores_and_Stores.Categores.Store_Resource> Store_Resources { get; set; }
+        public virtual ICollection<Categores_and_Stores.Categores.Store_Outgoings> Store_Outgoings { get; set; }
+        public virtual ICollection<Categores_and_Stores.Stores.Groupes_ConciliatorAccounts> Groupes_ConciliatorAccounts { get; set; }
+       // public virtual ICollection<Categores_and_Stores.Stores.StoreOutgoings_Returns> StoreOutgoings_Returns { get; set; }
+       // public virtual ICollection<Categores_and_Stores.Stores.StoreResource_Returns> StoreResource_Returns { get; set; }
+
         /// <summary>
         /// 
         /// </summary>

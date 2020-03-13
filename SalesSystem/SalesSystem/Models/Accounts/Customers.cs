@@ -15,6 +15,11 @@ namespace SalesSystem.Models.Accounts
         public virtual ICollection<LocalAccounts.Exchange__Voucher> Exchange__Vouchers { get; set; }
         public virtual ICollection<LocalAccounts.Bank_Deposited> Bank_Depositeds { get; set; }
         public virtual ICollection<Al_Sales.Sales_Invoice> Sales_Invoices { get; set; }
+        public virtual ICollection<Al_Sales.Sales_Returns> Sales_Returns { get; set; }
+        public virtual ICollection<Al_Sales.ServiceSales_Invoice> ServiceSales_Invoices { get; set; }
+        public virtual ICollection<Al_Sales.Prices_Displaies> Prices_Displaies { get; set; }
+      //  public virtual ICollection<Categores_and_Stores.Stores.StoreResource_Returns> StoreResource_Returns { get; set; }
+       // public virtual ICollection<Categores_and_Stores.Stores.StoreOutgoings_Returns> StoreOutgoings_Returns { get; set; }
         public string Cust_Name { get; set; }
         public int Cust_MainAccountNB { get; set; }
         public string Cust_Rank { get; set; }

@@ -12,14 +12,19 @@ namespace SalesSystem.Models.LocalAccounts
         //سند الصرف
         //Top
         [Key]
-        public int Move_Id { get; set; }
+        public int Move_Id { get; set; }//رقم الحركة
+        /// <summary>
+        /// طريقة الدفع
+        /// </summary>
+        public bool Cesh { get; set; }
+        public bool Cheque { get; set; }
         public DateTime Vou_History { get; set; }
         /// <summary>
         /// 
         /// </summary>
         public int BT_Id { get; set; }
         public virtual Editorial_Accounts.Bonds_Types Bonds_Types { get; set; }
-        public string BT_Name { get; set; }
+        public string BT_Name { get; set; }// نوع السند
         public bool Const_Comment { get; set; }
         /// <summary>
         /// 
@@ -50,7 +55,9 @@ namespace SalesSystem.Models.LocalAccounts
         public string CT_Name { get; set; }
         public virtual Editorial_Accounts.Cheque_Type Cheque_Type { get; set; }
         public DateTime Deservedness_History { get; set; }//تاريخ الاستحقاق
-        public string Sight_Method { get; set; }//طريقة التسديد
+        public string SMT_Name { get; set; }//طريقة التسديد
+        public virtual Al_Purchases.SightMethod_Types SightMethod_Types { get; set; }
+             
         /// <summary>
         /// هذا العمود حق المحصل يدخل سواء كان بنك او صندوق
         /// </summary>

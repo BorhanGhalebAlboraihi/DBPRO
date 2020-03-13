@@ -39,6 +39,19 @@ namespace SalesSystem.Models.Al_Purchases
         /// <summary>
         /// if select Debtor from Supllier
         /// </summary>
+        /// <summary>
+        /// Cesh from Bank
+        /// </summary>
+        public int Bnk_Id { get; set; }
+        public virtual Accounts.Banks Banks { get; set; }
+        public string Bnk_Name { get; set; }
+        public int ch_Id { get; set; }//number cheqe
+        public string Ch_Type { get; set; }
+        public DateTime Deservedness_History { get; set; }//تاريخ الاستحقاق
+        public string Sight_Method { get; set; }//طريقة التسديد
+        /// <summary>
+        /// 
+        /// </summary>
         public int Sup_Id { get; set; }
         public virtual Accounts.Suppliers Suppliers { get; set; }
         public string Sup_Name { get; set; }

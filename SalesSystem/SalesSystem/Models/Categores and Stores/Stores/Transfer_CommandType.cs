@@ -12,6 +12,7 @@ namespace SalesSystem.Models.Categores_and_Stores.Stores
         public int TC_Id { get; set; }
         [Key]
         public string TC_Type { get; set; }
+        public virtual ICollection<Stores_Transfer> Stores_Transfers { get; set; }
         public string State { get; set; }
     }
 }

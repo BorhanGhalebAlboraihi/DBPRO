@@ -35,11 +35,12 @@ namespace SalesSystem.Models.Editorial_Accounts
         public int Account_Id { get; set; }
         public virtual Accounts.MainAccounts MainAccounts { get; set; }
         public string Account_Name { get; set; }
+        public int Sup_Id { get; set; }
+        public int Cust_Id { get; set; }
         /// <summary>
         /// من خلال تحديد رقم الحساب يمكن تحديد مركز التكلفة
         /// </summary>
         public string C_Name { get; set; }
-     
         public double Debtor { get; set; }
         public double Borrower { get; set; }
         public double Equivalent { get; set; }// المكافئ

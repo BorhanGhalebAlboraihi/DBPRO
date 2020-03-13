@@ -12,5 +12,6 @@ namespace SalesSystem.Models.Categores_and_Stores.Categores
         [Key]
         public string Out_Type { get; set; }
         public virtual ICollection<Store_Outgoings> Store_Outgoings { get; set; }
+       // public virtual ICollection<Stores.StoreOutgoings_Returns> StoreOutgoings_Returns { get; set; }
     }
 }
